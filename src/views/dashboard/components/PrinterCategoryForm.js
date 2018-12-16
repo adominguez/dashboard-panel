@@ -17,7 +17,6 @@ const validatorOptions = {
         },
         stringLength: {
           max: 200,
-          min: 4,
           message: "The category name must be more than 4 characters and less than 200 long"
         }
       }
@@ -30,7 +29,6 @@ const validatorOptions = {
         },
         stringLength: {
           max: 500,
-          min: 4,
           message: "The category description must be more than 4 characters and less than 500 characters long"
         }
       }
@@ -49,29 +47,39 @@ export default class PrinterCategoryForm extends React.Component {
     buttonText: "send",
     buttonIcon: "glyphicon glyphicon-send",
     buttonColor: "blue",
-    buttonColorText: "white"
+    buttonColorText: "white",
+    hideHeader: false
   };
 
   constructor(props) {
     super(props);
     this.state = {
       formValues: {
-        name: this.props.categoryForm.name || "",
-        description: this.props.categoryForm.description || "",
-        state: this.props.categoryForm.state || "enabled",
+        name: "",
+        description: "",
+        state: "enabled",
       },
       invalid: null
     };
     this.onSubmit = this.onSubmit.bind(this);
+    this.handleValidate = this.handleValidate.bind(this);
+  }
+
+  componentWillReceiveProps (nextProps) {
+    this.setState({formValues: nextProps.categoryForm });
   }
 
   onSubmit(e) {
     const { formValues } = this.state
-    e.preventDefault();
     if(formValues.name && formValues.description && formValues.state) {
       this.setState({
+        formValues: {
+          name: "",
+          description: "",
+          state: "enabled",
+        },
         invalid: false
-      })
+      });
       alert('Envía datos');
     } else {
       this.setState({
@@ -113,7 +121,6 @@ export default class PrinterCategoryForm extends React.Component {
   }
 
   render() {
-    console.log('this.props.categoryForm', this.props.categoryForm);
     return (
       <BootstrapValidator options={validatorOptions}>
         <form id="printerCategoryForm" onSubmit={this.onSubmit}>
@@ -123,7 +130,7 @@ export default class PrinterCategoryForm extends React.Component {
               <div className="row">
                 <div className="col-md-8">
                   <label className="control-label">Name</label>
-                  <input type="text" className="form-control" name="name" defaultValue={this.props.categoryForm.name || ""} onChange={(event) => this.handleValidate(event)} />
+                  <input type="text" className="form-control" name="name" value={this.state.formValues.name} onChange={(event) => this.handleValidate(event)} />
                 </div>
 
                 <div className="col-md-4 selectContainer">
@@ -131,7 +138,7 @@ export default class PrinterCategoryForm extends React.Component {
                   <select 
                     className="form-control"
                     name="state"
-                    defaultValue={this.props.categoryForm.state || ""}
+                    value={this.state.formValues.state}
                     onChange={(event) => this.handleValidate(event)}>
                     {
                         this.props.states.map((element, idx) => {
@@ -149,11 +156,11 @@ export default class PrinterCategoryForm extends React.Component {
           <fieldset>
             <div className="form-group">
               <label className="control-label">Description</label>
-              <textarea 
+              <textarea
                 className="form-control"
                 name="description"
                 rows="8"
-                defaultValue={this.props.categoryForm.description || ""}
+                value={this.state.formValues.description}
                 onChange={(event) => this.handleValidate(event)} />
             </div>
           </fieldset>

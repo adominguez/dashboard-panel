@@ -36,7 +36,6 @@ export default class PrinterCategoryList extends React.Component {
   render() {
     return (
       <div>
-
         <div
           className="modal fade"
           id="myModal"
@@ -56,18 +55,19 @@ export default class PrinterCategoryList extends React.Component {
                 >
                   &times;
                 </button>
+                <h4 className="modal-title" id="myModalLabel">
+                  Edit category {this.state.selectedCategory.name}
+                </h4>
               </div>
               <div className="modal-body">
                 <div className="row">
                   <div className="col-md-12">
-                    <PrinterCategoryForm categoryForm={this.state.selectedCategory} buttonText="Save" buttonIcon="fa fa-save" />
+                    <PrinterCategoryForm categoryForm={this.state.selectedCategory} buttonText="Save" buttonIcon="fa fa-save" hideHeader />
                   </div>
                 </div>
               </div>
             </div>
-            {/* /.modal-content */}
           </div>
-          {/* /.modal-dialog */}
         </div>
 
 
