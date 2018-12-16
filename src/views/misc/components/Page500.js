@@ -32,14 +32,14 @@ export default class Page500 extends React.Component {
                   </p>
                   <ul className="error-search text-left font-md">
                     <li>
-                      <a href="#/dashboard/analytics">
+                      <a href="#/printers">
                         <small>
                           Go to My Dashboard <i className="fa fa-arrow-right" />
                         </small>
                       </a>
                     </li>
                     <li>
-                      <a href="#/dashboard/analytics">
+                      <a href="#/printers">
                         <small>
                           Contact SmartAdmin IT Staff{" "}
                           <i className="fa fa-mail-forward" />
@@ -47,12 +47,12 @@ export default class Page500 extends React.Component {
                       </a>
                     </li>
                     <li>
-                      <a href="#/dashboard/analytics">
+                      <a href="#/printers">
                         <small>Report error!</small>
                       </a>
                     </li>
                     <li>
-                      <a href="#/dashboard/analytics">
+                      <a href="#/printers">
                         <small>Go back</small>
                       </a>
                     </li>

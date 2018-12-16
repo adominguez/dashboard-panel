@@ -3,7 +3,17 @@
     {
       "title": "3D Printers",
       "icon": "fa fa-lg fa-fw fa-cube txt-color-blue",
-      "route": "/dashboard/analytics"
+      "route": "/printers",
+      "items": [
+        {
+          "title": "Create printer category",
+          "route": "/printers/create-printer-category"
+        },
+        {
+          "title": "Create new 3D printer",
+          "route": "/printers/create-printer"
+        }
+      ]
     },
     {
       "title": "Outlook",

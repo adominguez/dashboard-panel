@@ -39,7 +39,7 @@ export default class Forgot extends React.Component {
                     </h4>
                     <div className="login-app-icons">
                       <a
-                        href="#/dashboard/analytics"
+                        href="#/printers"
                         className="btn btn-danger btn-sm"
                       >
                         Frontend Template
@@ -133,7 +133,7 @@ export default class Forgot extends React.Component {
                     </fieldset>
                     <footer>
                       <a
-                        href="#/dashboard/analytics"
+                        href="#/"
                         className="btn btn-primary"
                       >
                         <i className="fa fa-refresh" /> Reset Password

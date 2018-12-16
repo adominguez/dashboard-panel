@@ -9,7 +9,7 @@ export default class LockedScreen extends React.Component {
         <div id="main" role="main">
           <form
             className="lockscreen animated flipInY"
-            action="#/dashboard/analytics"
+            action="#/printers"
           >
             <div className="logo">
               <h1 className="semi-bold">

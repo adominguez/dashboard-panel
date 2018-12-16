@@ -59,7 +59,7 @@ export default class Page404 extends React.Component {
                     <div className="col-sm-12">
                       <ul className="list-inline">
                         <li>
-                          &#xA0;<a href="#/dashboard/analytics">Dashbaord</a>
+                          &#xA0;<a href="#/printers">Dashbaord</a>
                           &#xA0;
                         </li>
                         <li>.</li>

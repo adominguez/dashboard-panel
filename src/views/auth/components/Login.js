@@ -41,7 +41,7 @@ export default class Login extends React.Component {
 
                     <div className="login-app-icons">
                       <a
-                        href="#/dashboard/analytics"
+                        href="#/printers"
                         className="btn btn-danger btn-sm"
                       >
                         Frontend Template

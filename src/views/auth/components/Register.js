@@ -39,7 +39,7 @@ export default class Register extends React.Component {
                     </h4>
                     <div className="login-app-icons">
                       <a
-                        href="#/dashboard/analytics"
+                        href="#/printers"
                         className="btn btn-danger btn-sm"
                       >
                         Frontend Template
@@ -227,7 +227,7 @@ export default class Register extends React.Component {
                     </fieldset>
                     <footer>
                       <a
-                        href="#/dashboard/analytics"
+                        href="#/printers"
                         className="btn btn-primary"
                       >
                         Register
