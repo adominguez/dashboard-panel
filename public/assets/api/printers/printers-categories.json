@@ -1,0 +1,16 @@
+[{
+    "name": "principiante",
+    "description": "Descripcion",
+    "state": "enabled"
+  },
+  {
+    "name": "kit",
+    "description": "Descripcion",
+    "state": "enabled"
+  },
+  {
+    "name": "profesional",
+    "description": "Descripcion",
+    "state": "disabled"
+  }
+]
