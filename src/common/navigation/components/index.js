@@ -10,6 +10,7 @@ import Navigation from "./Navigation.js";
 import Shortcut from "./Shortcut.js";
 import LoginInfo from "./LoginInfo";
 import ToggleShortcut from "./ToggleShortcut";
+import ListedLinks from "./ListedLinks.js";
 
 export {
   BigBreadcrumbs,
@@ -21,5 +22,6 @@ export {
   Navigation,
   Shortcut,
   LoginInfo,
-  ToggleShortcut
+  ToggleShortcut,
+  ListedLinks
 };
