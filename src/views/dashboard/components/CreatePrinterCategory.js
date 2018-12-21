@@ -3,7 +3,6 @@ import React from "react";
 import {
   BigBreadcrumbs,
   WidgetGrid,
-  JarvisWidget
 } from "../../../common";
 
 import PrinterCategoryForm from "./PrinterCategoryForm";
@@ -29,15 +28,7 @@ export default class CreatePrinterCategory extends React.Component {
             {/* NEW WIDGET ROW START */}
             <div className="col-sm-12">
               {/* Widget ID (each widget will need unique ID)*/}
-              <JarvisWidget
-                id="wid-id-1"
-                colorbutton={false}
-                editbutton={false}
-                deletebutton={false}
-                sortable={false}
-                fullscreenbutton={false}
-                color="blue"
-              >
+              <div className="well">
                 <header>
                   <h2>Create new printer category </h2>
                 </header>
@@ -46,7 +37,7 @@ export default class CreatePrinterCategory extends React.Component {
                     <PrinterCategoryForm />
                   </div>
                 </div>
-              </JarvisWidget>
+              </div>
             </div>
           </div>
         </WidgetGrid>

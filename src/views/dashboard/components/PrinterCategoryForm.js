@@ -121,11 +121,12 @@ export default class PrinterCategoryForm extends React.Component {
   }
 
   render() {
+    const { hideHeader } = this.props
     return (
       <BootstrapValidator options={validatorOptions}>
         <form id="printerCategoryForm" onSubmit={this.onSubmit}>
           <fieldset>
-            <legend>Printer Category</legend>
+            <legend hidden={hideHeader}>Printer Category</legend>
             <div className="form-group">
               <div className="row">
                 <div className="col-md-8">
